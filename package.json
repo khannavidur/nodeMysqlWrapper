@@ -1,11 +1,29 @@
 {
-	"name"			: "nodeMysqlWrapper",
-	"version" 		: "0.0.1",
-	"main"			: "index.js",
-	"description"	: "Provides a paginate kind of flow for sql queries coupled with events",
-	"author"		: "Vidur Khanna",
-	"dependencies": {
-		"mysql" 	: "~2.6.2",
-		"lodash"	: "~3.8.0"
-	}
+  "name": "nodeMysqlWrapper",
+  "version": "0.0.1",
+  "main": "index.js",
+  "description": "Provides a paginate kind of flow for sql queries coupled with events",
+  "author": "Vidur Khanna",
+  "dependencies": {
+    "mysql": "~2.6.2",
+    "lodash": "~3.8.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khannavidur/nodeMysqlWrapper.git"
+  },
+  "keywords": [
+    "mysql",
+    "node",
+    "mysqlwrapper"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khannavidur/nodeMysqlWrapper/issues"
+  },
+  "homepage": "https://github.com/khannavidur/nodeMysqlWrapper"
 }
