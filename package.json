@@ -1,0 +1,11 @@
+{
+	"name"			: "nodeMysqlWrapper",
+	"version" 		: "0.0.1",
+	"main"			: "index.js",
+	"description"	: "Provides a paginate kind of flow for sql queries coupled with events",
+	"author"		: "Vidur Khanna",
+	"dependencies": {
+		"mysql" 	: "~2.6.2",
+		"lodash"	: "~3.8.0"
+	}
+}

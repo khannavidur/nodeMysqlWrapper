@@ -1,22 +1,19 @@
 "use strict";
 (function(){
-	var UTIL = require('util');
-
-	var mysql = require('./index.js');
-
-	var options = {
+	var 
+		UTIL 	= require('util'),
+		mysql 	= require('./index.js'),
+		options = {
 		host 		: 'localhost',
 		user 		: 'root',
 		password 	: '',
 		db 			: 'dummy'
-	};
-
-	var query = "select * from user where roll_no=2";
-
-	var mysqlOb = new mysql(options);
+	},
+	query 		= "select * from user where roll_no=2",
+	mysqlOb 	= new mysql(options);
 
 	mysqlOb.establishConnection();
-	mysqlOb.setThresholdSize(2);
+	mysqlOb.setThresholdSize(1);
 	mysqlOb.setQuery(query);	
 
 	mysqlOb.on('connectionEstablished',function(threadid){
