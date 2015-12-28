@@ -1,0 +1,8 @@
+node_modules
+.project
+.settings
+logs
+public/system/deploycolor
+public/system/time
+npm-debug.log
+.idea/
