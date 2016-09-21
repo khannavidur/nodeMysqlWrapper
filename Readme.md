@@ -33,37 +33,36 @@ Included a test.js for your help.
   `mysqlOb.setThresholdSize(10);`
 
 - Set the query
-  ```
-  var query = "select * from users";
-  mysqlOb.setQuery(query);
-  ```
+    ```
+    var query = "select * from users";
+    mysqlOb.setQuery(query);
+    ```
   - It emits `queryData` containing the resultant row data. Paginate further by calling `mysqlOb.paginate();` 
-  ```
-  mysqlOb.on('queryData',function(row){
-    console.log("data : " + UTIL.inspect(row,10,true,10));
-    mysqlOb.paginate();
-  });
-  
-  ```
+    ```
+    mysqlOb.on('queryData',function(row){
+      console.log("data : " + UTIL.inspect(row,10,true,10));
+      mysqlOb.paginate();
+    });
+    ```
   
   - `queryEnd` is emmitted to mark the end of pagination.It also send along a message saying `That's all folks!`
-  ```
-  mysqlOb.on('queryEnd',function(message){
-    console.log(message);
-    process.exit(0);
-  });
-  ```
+    ```
+    mysqlOb.on('queryEnd',function(message){
+      console.log(message);
+      process.exit(0);
+    });
+    ```
   
   - In case of any errors in the query `queryError` is emitted along with the error.
-  ```
-  mysqlOb.on('queryError',function(queryError){
-    console.log("error in querry" + queryError);
-  });
-  ```
+    ```
+    mysqlOb.on('queryError',function(queryError){
+      console.log("error in querry" + queryError);
+    });
+    ```
   
   - `queryFields` is emitted with fields which contain information about the returned results fields (if any)
-  ```
-  mysqlOb.on('queryFields',function(queryFields){
-    console.log("queryFields :" + UTIL.inspect(queryFields,10,true,10));
-  });
-  ```
+    ```
+    mysqlOb.on('queryFields',function(queryFields){
+      console.log("queryFields :" + UTIL.inspect(queryFields,10,true,10));
+    });
+    ```
